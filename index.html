@@ -94,7 +94,7 @@
         let selectedCategory = "";
 
         // Infinite scroll
-        let limit = 2;
+        let limit = 4;
         let offset = 0;
 
         init_UI();
@@ -105,6 +105,7 @@
         $(".scrollContainer").scroll(function () {
             if(($(".scrollContainer").scrollTop() + $(".scrollContainer").innerHeight() >= $("#nouvellesList").height())){
                 offset++;
+                limit=1;
                 previousScrollPosition = $(".scrollContainer").scrollTop();
                 getNouvellesList();
                 $(".scrollContainer").scrollTop(previousScrollPosition);
@@ -280,6 +281,7 @@
 
             $(".fa-refresh").click(e => { 
                 offset=0; 
+                limit=4;
                 getNouvellesList();
                 $(".scrollContainer").scrollTop(0);
             })
