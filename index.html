@@ -104,7 +104,7 @@
         // Infinite scroll
         $(".scrollContainer").scroll(function () {
             if(($(".scrollContainer").scrollTop() + $(".scrollContainer").innerHeight() >= $("#nouvellesList").height())){
-                offset++;
+                offset+=limit;
                 previousScrollPosition = $(".scrollContainer").scrollTop();
                 getNouvellesList();
                 $(".scrollContainer").scrollTop(previousScrollPosition);
