@@ -344,7 +344,7 @@
                     click: function () {
                         holdCheckETag = false;
                         if (nouvelleIdToDelete)
-                            DELETE(nouvelleIdToDelete, refreshNouvellesList, error);
+                            DELETE(nouvelleIdToDelete, getNouvellesList, error);
                         nouvelleIdToDelete = 0;
                         $(this).dialog("close");
                     }
