@@ -276,7 +276,7 @@
 
         function init_UI() {
             $("#newNouvelleCmd").click(newNouvelle)
-            $("#searchCategory").change(() => { selectedCategory = $("#searchCategory").val(); getBookmarksList(); })
+            $("#searchCategory").change(() => { selectedCategory = $("#searchCategory").val(); getNouvellesList(); })
 
             $(".fa-refresh").click(e => { 
                 offset=0; 
