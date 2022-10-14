@@ -311,9 +311,9 @@
                         let nouvelle = nouvelleFromForm();
                         if (nouvelle) {
                             if (createMode)
-                                POST(nouvelle, refreshNouvellesList, error);
+                                POST(nouvelle, getNouvellesList, error);
                             else
-                                PUT(nouvelle, refreshNouvellesList, error);
+                                PUT(nouvelle, getNouvellesList, error);
                             resetNouvelleForm();
                             holdCheckETag = false;
                             $(this).dialog("close");
